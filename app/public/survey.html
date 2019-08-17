@@ -156,7 +156,7 @@
     $("#submit").on("click", function (event) {
         event.preventDefault();
         $(".form-control.option").each(function () {
-            newArray.push($(this).val());
+            friendScore.push($(this).val());
         })
         var newFriend = {
             name: $('#name').val().trim(),
@@ -165,7 +165,13 @@
         };
 
         //console.log(newFriend);
-        //console.log(newArray);
+        //console.log(friendScore);
+       $.post('/api/friends', newFriend)
+       .then(function(data) {
+          console.log(data);
+          alert("Adding character...");
+       })
+
     });
 
 
