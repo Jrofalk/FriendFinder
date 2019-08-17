@@ -121,7 +121,7 @@
         <div class="form-group">
             <label for="">Question 9</label>
             <select class="form-control option" id="q-nine">
-                <option style="display:none">   
+                <option style="display:none">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -140,7 +140,8 @@
                 <option>5</option>
             </select>
         </div>
-        <button type="submit" class="btn-outline-light" and style="background-color:transparent" id='submit'>Submit</button>
+        <button type="submit" class="btn-outline-light" and style="background-color:transparent"
+            id='submit'>Submit</button>
 
     </form>
 
@@ -150,26 +151,22 @@
 
 <script type="text/javascript">
 
-var newArray = [];
+    var newArray = [];
 
-$("#submit").on("click", function(event) {
-    event.preventDefault();
-    var newFriend = {
-    name: $('#name').val().trim(),
-    photo: $('#url').val().trim(),
-    scores: $(".form-control.option").each(function(){
-    newArray.push($(this).val());
-})
-//How do I get newArray to print inside of the object above next to scores? (Just place that function outside of the overall array before newFriend?)
-    
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+        $(".form-control.option").each(function () {
+            newArray.push($(this).val());
+        })
+        var newFriend = {
+            name: $('#name').val().trim(),
+            photo: $('#url').val().trim(),
+            scores: newArray
+        };
 
-    };
-    
-   console.log(newFriend);
-   console.log(newArray);
-   
-
-});
+        console.log(newFriend);
+        console.log(newArray);
+    });
 
 
 
