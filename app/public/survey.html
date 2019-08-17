@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Friend Finder</title>
@@ -23,15 +24,15 @@
     <form>
         <div class="form-group">
             <label for="">Name</label>
-            <input type="name" class="form-control" id="" placeholder="">
+            <input type="name" class="form-control" id="name" placeholder="">
         </div>
         <div class="form-group">
-            <label for="">Email Address</label>
-            <input type="email-address" class="form-control" id="" placeholder="">
+            <label for="">Photo (URL)</label>
+            <input type="url" class="form-control" id="url" placeholder="">
         </div>
         <div class="form-group">
             <label for="">Question 1</label>
-            <select class="form-control" id="q-one">
+            <select class="form-control option" id="q-one">
                 <option style="display:none">
                 <option>1</option>
                 <option>2</option>
@@ -42,9 +43,9 @@
         </div>
         <div class="form-group">
             <label for="">Question 2</label>
-            <select class="form-control" id="q-two">
+            <select class="form-control option" id="q-two">
                 <option style="display:none">
-                <option>1</option>
+                <option class='option'>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
@@ -53,9 +54,9 @@
         </div>
         <div class="form-group">
             <label for="">Question 3</label>
-            <select class="form-control" id="q-three">
+            <select class="form-control option" id="q-three">
                 <option style="display:none">
-                <option>1</option>
+                <option class='option'>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
@@ -64,9 +65,9 @@
         </div>
         <div class="form-group">
             <label for="">Question 4</label>
-            <select class="form-control" id="q-four">
+            <select class="form-control option" id="q-four">
                 <option style="display:none">
-                <option>1</option>
+                <option class='option'>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
@@ -75,9 +76,9 @@
         </div>
         <div class="form-group">
             <label for="">Question 5</label>
-            <select class="form-control" id="q-five">
+            <select class="form-control option" id="q-five">
                 <option style="display:none">
-                <option>1</option>
+                <option class='option' >1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
@@ -86,7 +87,7 @@
         </div>
         <div class="form-group">
             <label for="">Question 6</label>
-            <select class="form-control" id="q-six">
+            <select class="form-control option" id="q-six">
                 <option style="display:none">
                 <option>1</option>
                 <option>2</option>
@@ -97,7 +98,7 @@
         </div>
         <div class="form-group">
             <label for="">Question 7</label>
-            <select class="form-control" id="q-seven">
+            <select class="form-control option" id="q-seven">
                 <option style="display:none">
                 <option>1</option>
                 <option>2</option>
@@ -108,7 +109,7 @@
         </div>
         <div class="form-group">
             <label for="">Question 8</label>
-            <select class="form-control" id="q-eight">
+            <select class="form-control option" id="q-eight">
                 <option style="display:none">
                 <option>1</option>
                 <option>2</option>
@@ -119,7 +120,7 @@
         </div>
         <div class="form-group">
             <label for="">Question 9</label>
-            <select class="form-control" id="q-nine">
+            <select class="form-control option" id="q-nine">
                 <option style="display:none">   
                 <option>1</option>
                 <option>2</option>
@@ -130,7 +131,7 @@
         </div>
         <div class="form-group">
             <label for="">Question 10</label>
-            <select class="form-control" id="q-ten">
+            <select class="form-control option" id="q-ten">
                 <option style="display:none">
                 <option>1</option>
                 <option>2</option>
@@ -139,10 +140,37 @@
                 <option>5</option>
             </select>
         </div>
-        <button type="submit" class="btn-outline-light" and style="background-color:transparent">Submit</button>
+        <button type="submit" class="btn-outline-light" and style="background-color:transparent" id='submit'>Submit</button>
 
     </form>
 
 </body>
 
 </html>
+
+<script type="text/javascript">
+
+var newArray = [];
+
+$("#submit").on("click", function(event) {
+    event.preventDefault();
+    var newFriend = {
+    name: $('#name').val().trim(),
+    photo: $('#url').val().trim(),
+    scores: $(".form-control.option").each(function(){
+    newArray.push($(this).val());
+})
+//How do I get newArray to print inside of the object above next to scores?
+    
+
+    };
+    
+   console.log(newFriend);
+   console.log(newArray);
+   
+
+});
+
+
+
+</script>
