@@ -151,7 +151,7 @@
 
 <script type="text/javascript">
 
-    var newArray = [];
+    var friendScore = [];
 
     $("#submit").on("click", function (event) {
         event.preventDefault();
@@ -161,11 +161,11 @@
         var newFriend = {
             name: $('#name').val().trim(),
             photo: $('#url').val().trim(),
-            scores: newArray
+            scores: friendScore
         };
 
-        console.log(newFriend);
-        console.log(newArray);
+        //console.log(newFriend);
+        //console.log(newArray);
     });
 
 
