@@ -166,11 +166,10 @@
 
         //console.log(newFriend);
         //console.log(friendScore);
-       $.post('/api/friends', newFriend)
-       .then(function(data) {
-          console.log(data);
-          alert("Adding character...");
-       })
+        $.post('/api/friends', newFriend)
+            .then(function (data) {
+                //console.log(data);
+            })
 
     });
 
