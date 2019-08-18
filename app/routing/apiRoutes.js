@@ -33,7 +33,10 @@ module.exports = function (app) {
       }
     }
     friendData.push(newFriend);
-    console.log(friendData[match]);
+    //console.log(friendData[match]);
+
+    res.json(friendData[match]);
+    
   })
 
 }
