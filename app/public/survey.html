@@ -174,7 +174,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <img id='photo' src='#'>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -217,13 +217,8 @@
         $.post('/api/friends', newFriend)
             .done(function (data) {
                 $(".modal-title").text(data.name);
+                $("#photo").attr('src', data.photo);
                 $("#exampleModal").modal("toggle");
-
-                //Make sure correct information goes to modal, delete any unnecessary in the bootstrap modal template
-                console.log(data.name);
-
-
-
             })
 
 
