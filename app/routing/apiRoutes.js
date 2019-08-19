@@ -11,14 +11,8 @@ module.exports = function (app) {
 
   app.post("/api/friends", function (req, res) {
     var newFriend = req.body;
-    // friendData.push(newFriend);
-    //res.json(newFriend);
-    //for (let i = 0; i < friendData.length; i++) {
-    //console.log(friendData[i].scores);  
-    //}
-
     var match = 0;
-    var minimumDifference = 40;
+    var minimumDifference = 500;
 
     for (let i = 0; i < friendData.length; i++) {
       var totalDifference = 0;
