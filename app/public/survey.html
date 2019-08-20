@@ -13,11 +13,45 @@
     <style type="text/css">
         label {
             font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .jumbotron {
+            height: 200px;
+        }
+
+        .form-group {
+            margin: 0 auto;
+            width: 50%;
+            font-family: 'Bahianita', cursive;
+            font-family: 'Yantramanav', sans-serif;
         }
 
         #photo {
             max-width: 100%;
             height: auto;
+        }
+
+        #name {
+            font-size: 24px;
+        }
+
+        #survey-title {
+            margin-top: 50px;
+            background-color: transparent !important;
+            font-family: 'Bahianita', cursive;
+            font-family: 'Yantramanav', sans-serif;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+
+        #submit {
+            margin-bottom: 50px;
+            font-family: 'Bahianita', cursive;
+            font-family: 'Yantramanav', sans-serif;
+            padding: 5px 10px;
+            color: black;
+            margin-top: 25px;
         }
     </style>
 </head>
@@ -26,10 +60,15 @@
 
     <div class='container'>
 
-        <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
-            <a class="navbar-brand">Friend Finder</a>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="mx-auto order-0">
+                <a href='/home' id='name' class="navbar-brand mx-auto">(Pet) Friend Finder</a>
+            </div>
+        </nav>
     </div>
-    </nav>
+
+    <div class='jumbotron' id='survey-title'>
+        <h3 class='text-center'>Survey</h3>
     </div>
 
     <form>
@@ -161,8 +200,12 @@
                 <option>5</option>
             </select>
         </div>
-        <button type="submit" class="btn-outline-light" and style="background-color:transparent"
-            id='submit'>Submit</button>
+        <div class="form-group">
+            <div class='text-center'>
+                <button type="submit" class="btn-outline-light" and style="background-color:transparent"
+                    id='submit'>Submit</button>
+            </div>
+        </div>
 
     </form>
 
@@ -184,6 +227,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -227,7 +271,7 @@
     })
 
 
-
+//Add CSS, make sure to link to in portfolio
 
 
 
