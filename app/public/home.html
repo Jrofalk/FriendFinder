@@ -8,13 +8,61 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Friend Finder</title>
+    <style type="text/css">
+    label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .jumbotron {
+            height: 200px;
+        }
+
+        .form-group {
+            margin: 0 auto;
+            width: 50%;
+            font-family: 'Bahianita', cursive;
+            font-family: 'Yantramanav', sans-serif;
+        }
+
+        #photo {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #name {
+            font-size: 24px;
+        }
+
+        #survey-title {
+            margin-top: 100px;
+            background-color: transparent !important;
+            font-family: 'Bahianita', cursive;
+            font-family: 'Yantramanav', sans-serif;
+            height: 50px;
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            color: black;
+        }
+    
+    </style>
 </head>
 
 <body>
 
-    <div class='jumbotron' id='main-title'>
-        <h3 class='text-center'>Friend Finder</h3>
-        <a href="/survey"><button class="btn-outline-light" and style="background-color:transparent">Survey</button></a>
+    <div class='container'>
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="mx-auto order-0">
+                <h1 id='name' class="navbar-brand mx-auto">(Pet) Friend Finder</h1>
+            </div>
+        </nav>
+
+        <div class='text-center'>
+            <a href="/survey"><button class="btn-outline-light" and
+                    style="background-color:transparent" id='survey-title'>Survey</button></a>
+        </div>
+
     </div>
 
 
