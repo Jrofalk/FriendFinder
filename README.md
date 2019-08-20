@@ -4,7 +4,7 @@ Should you really get a dog? Or would it be better for you to stick with a nice,
 
 ## Link:
 
-(https://fierce-eyrie-33092.herokuapp.com/)
+https://fierce-eyrie-33092.herokuapp.com/
 
 ## Directions:
 
